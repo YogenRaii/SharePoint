@@ -36,12 +36,12 @@
 						<li class="list-group-item active" ui-sref="chapter({'id':'${chapters[0].slug}',chapId:${chapters[0].id }})">
 							<input type="radio" id="radio-${chapters[0].id}" name="category"
 							class="radio-primary" value="${chapters[0].id}">${chapters[0].title}</li>
-							<ul class="sub" role="menu">
+							<%-- <ul class="sub" role="menu">
 								<c:forEach items="${chapters[0].chapterContents}" var="content">
 									<li class= "sub-li" ui-sref="content({contentId:'${content.slug}',chapId:'${chapters[0].slug}'})"><i class="fa fa-chevron-right">  </i> ${content.title }</li>
 								</c:forEach>
 							
-							</ul>
+							</ul> --%>
 						<c:forEach items="${chapters}" var="chapter" begin="1">
 							<c:set var="shortDesc" value="${fn:substring(chapter.title, 0, 27)}" />
 							<li class="list-group-item sub-menu dropdown"
@@ -49,12 +49,12 @@
 								<input type="radio" id="radio-${chapter.id}" name="category"
 								class="radio-primary" value="${chapter.id}">${shortDesc}
 							</li>
-							<ul  class="sub" role="menu">
+							<%-- <ul  class="sub" role="menu">
 								<c:forEach items="${chapter.chapterContents}" var="content">
 									<li class= "sub-li" ui-sref="content({contentId:'${content.slug}',chapId:'${chapter.slug}'})"><i class="fa fa-chevron-right">  </i> ${content.title }</li>
 								</c:forEach>
 
-							</ul>
+							</ul> --%>
 						</c:forEach>
 					</ul>
 				</div>
@@ -70,13 +70,6 @@
 				</div>
 				<div ui-view="content-view"></div>
 				
-				<div class="chapter-intro-first">
-					<div>
-						<h3>${chapters[0].title}</h3>
-						<p>${chapters[0].description}</p>
-					
-					</div>
-				</div>
 				
 			</div>
 
@@ -93,14 +86,14 @@
 			var $this = $(this);
 			$('.list-group').find('.active').removeClass('active');
 			$this.addClass('active');
-			$('.list-group').find('ul').addClass('sub');
+			/* $('.list-group').find('ul').addClass('sub');
 			if($this.next('ul').hasClass('sub')){
 				$this.next('ul').removeClass('sub')
 			}else{
 				$this.next('ul').addClass('sub')
 			}
 			
-			$('.chapter-intro-first').addClass('sub');
+			$('.chapter-intro-first').addClass('sub'); */
 			
 		});
 		//$('.list-group>.active').click();

@@ -20,6 +20,10 @@ angular.module('mainApp',['ui.router','ngSanitize','ngLoadingSpinner'])
 			"chapter-view":{
 				templateUrl : '../resources/front/app/chapter.html',
 				controller : 'ChapterCtrl'
+			},
+			"content-view":{
+				templateUrl : '../resources/front/app/tutorial.html',
+				controller : 'TutorialCtrl'
 			}
 			
 		}
@@ -44,15 +48,15 @@ angular.module('mainApp',['ui.router','ngSanitize','ngLoadingSpinner'])
 	console.log($stateParams);
 }).controller('ChapterIntroCtrl',function($stateParams){
 	console.log("controller called");
-	/*$(function() {
+	$(function() {
 		console.log("radio is being clicked...");
-//		$("input:radio:first").click();
+		$("input:radio:first").click();
 		console.log($(".list-group>.active").html());
 //		$(".list-group>.active").click();
 //		$("input:radio[name=category][disabled=false]:first").attr('checked', true);
 //		$("input:radio:first").click();​
 	});
-*/	
+	
 	
 })
 
@@ -86,7 +90,7 @@ angular.module('mainApp',['ui.router','ngSanitize','ngLoadingSpinner'])
 	var factory ={};
 	factory.getTutorials = function(id,slug) {
 		console.log("got here");
-		return $http.get(id+'/contents/'+slug).success(function(data) {
+		return $http.get(id+'/contents').success(function(data) {
 			factory.contents = data;
 		}).error(function(response) {
 			console.log(response);
