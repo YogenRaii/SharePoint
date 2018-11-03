@@ -1,21 +1,21 @@
 package com.bitMiners.eProgrammerz.services;
 
-import java.util.List;
-
 import com.bitMiners.eProgrammerz.domain.Chapter;
 
+import java.util.List;
+
 public interface ChapterService {
-	public Chapter findOne(Long id);
+    public Chapter findOne(Long id);
 
-	public Long save(Chapter chapter);
+    public Long save(Chapter chapter);
 
-	public Long delete(Long chapterId);
-	
-	Chapter update(Chapter chapter);
+    public Long delete(Long chapterId);
 
-	List<Chapter> findChaptersForLang(Long id);
+    Chapter update(Chapter chapter);
 
-	List<Chapter> findAll(Long languageId);
+    List<Chapter> findChaptersForLang(Long id);
 
-	List<Chapter> findChaptersForLangId(String id);
+    List<Chapter> findAll(Long languageId);
+
+    List<Chapter> findChaptersForLangId(String id);
 }

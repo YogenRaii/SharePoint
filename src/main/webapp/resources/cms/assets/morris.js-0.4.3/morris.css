@@ -24,5 +24,6 @@
     margin: 0.1em 0;
 }
 
-
-#hero-graph, #hero-bar, #hero-area, #hero-donut {height: 250px}
+#hero-graph, #hero-bar, #hero-area, #hero-donut {
+    height: 250px
+}

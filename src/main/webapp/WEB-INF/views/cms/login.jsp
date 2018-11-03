@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,35 +7,38 @@
 
     <title>Login| eProgrammerz</title>
 
-    <!-- Bootstrap CSS -->    
+    <!-- Bootstrap CSS -->
     <link href="${pageContext.request.contextPath}/resources/cms/css/bootstrap.min.css" rel="stylesheet">
     <!-- bootstrap theme -->
     <link href="${pageContext.request.contextPath}/resources/cms/css/bootstrap-theme.css" rel="stylesheet">
     <!--external css-->
     <!-- font icon -->
-    <link href="${pageContext.request.contextPath}/resources/cms/css/elegant-icons-style.css" rel="stylesheet" />
-    <link href="${pageContext.request.contextPath}/resources/cms/css/font-awesome.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/resources/cms/css/elegant-icons-style.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/resources/cms/css/font-awesome.css" rel="stylesheet"/>
     <!-- Custom styles -->
     <link href="${pageContext.request.contextPath}/resources/cms/css/style.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/cms/css/style-responsive.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/resources/cms/css/style-responsive.css" rel="stylesheet"/>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
     <!--[if lt IE 9]>
     <script src="<c:url value="/resources/cms/js/html5shiv.js"/>"></script>
-    <script src="<c:url value="/resources/cms/js/respond.min.js"/>"></script>
+    <
+    script
+    src = "<c:url value=" / resources / cms / js / respond.min.js
+    "/>" ></script>
     <![endif]-->
 </head>
 
-  <body class="login-img3-body">
-  
-    <div class="container">
-      <form class="login-form" action="login" method="post">        
+<body class="login-img3-body">
+
+<div class="container">
+    <form class="login-form" action="login" method="post">
         <div class="login-wrap">
             <p class="login-img"><i class="icon_lock_alt"></i></p>
-            <p style="color: red;font-weight: bold;" > ${loginError}</p>
+            <p style="color: red;font-weight: bold;"> ${loginError}</p>
             <div class="input-group">
-              <span class="input-group-addon"><i class="icon_profile"></i></span>
-              <input type="text" name="username" class="form-control" placeholder="Username" autofocus>
+                <span class="input-group-addon"><i class="icon_profile"></i></span>
+                <input type="text" name="username" class="form-control" placeholder="Username" autofocus>
             </div>
             <div class="input-group">
                 <span class="input-group-addon"><i class="icon_key_alt"></i></span>
@@ -48,10 +50,10 @@
             </label>
             <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
         </div>
-      </form>
+    </form>
 
-    </div>
+</div>
 
 
-  </body>
+</body>
 </html>

@@ -1,5 +1,4 @@
 describe 'Morris.Bar', ->
-
   describe 'svg structure', ->
     defaults =
       element: 'graph'
@@ -27,7 +26,7 @@ describe 'Morris.Bar', ->
       xkey: 'x'
       ykeys: ['y', 'z']
       labels: ['Y', 'Z']
-      barColors: [ '#0b62a4', '#7a92a3']
+      barColors: ['#0b62a4', '#7a92a3']
       gridLineColor: '#aaa'
       gridStrokeWidth: 0.5
       gridTextColor: '#888'

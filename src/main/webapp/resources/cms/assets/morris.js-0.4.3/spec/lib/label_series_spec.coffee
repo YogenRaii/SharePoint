@@ -1,5 +1,4 @@
 describe '#labelSeries', ->
-
   it 'should generate decade intervals', ->
     Morris.labelSeries(
       new Date(1952, 0, 1).getTime(),
@@ -161,7 +160,7 @@ describe '#labelSeries', ->
       new Date(2012, 0, 6).getTime(),
       1000,
       "day",
-      (d) -> "#{d.getMonth()+1}/#{d.getDate()}/#{d.getFullYear()}"
+      (d) -> "#{d.getMonth() + 1}/#{d.getDate()}/#{d.getFullYear()}"
     ).should.deep.equal([
       ["1/1/2012", new Date(2012, 0, 1).getTime()],
       ["1/2/2012", new Date(2012, 0, 2).getTime()],

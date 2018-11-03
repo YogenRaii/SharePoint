@@ -1,12 +1,11 @@
 describe 'Morris.Donut', ->
-
   describe 'svg structure', ->
     defaults =
       element: 'graph'
-      data: [ {label: 'Jam', value: 25 },
-        {label: 'Frosted', value: 40 },
-        {label: 'Custard', value: 25 },
-        {label: 'Sugar', value: 10 } ]
+      data: [{label: 'Jam', value: 25},
+        {label: 'Frosted', value: 40},
+        {label: 'Custard', value: 25},
+        {label: 'Sugar', value: 10}]
       formatter: (y) -> "#{y}%"
 
     it 'should contain 2 paths for each segment', ->
@@ -19,14 +18,14 @@ describe 'Morris.Donut', ->
 
   describe 'svg attributes', ->
     defaults =
-    defaults =
-      element: 'graph'
-      data: [ {label: 'Jam', value: 25 },
-        {label: 'Frosted', value: 40 },
-        {label: 'Custard', value: 25 },
-        {label: 'Sugar', value: 10 } ]
-      formatter: (y) -> "#{y}%"
-      colors: [ '#0B62A4', '#3980B5', '#679DC6', '#95BBD7']
+      defaults =
+        element: 'graph'
+        data: [{label: 'Jam', value: 25},
+          {label: 'Frosted', value: 40},
+          {label: 'Custard', value: 25},
+          {label: 'Sugar', value: 10}]
+        formatter: (y) -> "#{y}%"
+        colors: ['#0B62A4', '#3980B5', '#679DC6', '#95BBD7']
 
     it 'should have a label with font size 15', ->
       chart = Morris.Donut $.extend {}, defaults

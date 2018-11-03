@@ -2,5 +2,7 @@
 .project
 .settings/
 target
-/src/main/resources/jdbc.properties
 *.class
+*.idea
+*.iml
+*.springBeans

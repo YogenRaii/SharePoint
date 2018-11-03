@@ -1,19 +1,19 @@
 package com.bitMiners.eProgrammerz.services;
 
-import java.util.List;
-
 import com.bitMiners.eProgrammerz.domain.Language;
 
+import java.util.List;
+
 public interface LanguageService {
-	public Language findOne(Long id);
+    public Language findOne(Long id);
 
-	public List<Language> findAll();
+    public List<Language> findAll();
 
-	public Long save(Language language);
+    public Long save(Language language);
 
-	public Long delete(Long laLong);
-	
-	Language update(Language language);
+    public Long delete(Long laLong);
 
-	Language findLangByLangId(String id);
+    Language update(Language language);
+
+    Language findLangByLangId(String id);
 }
